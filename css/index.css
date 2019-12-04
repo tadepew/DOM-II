@@ -182,7 +182,8 @@ img {
   position: fixed;
 }
 .main-navigation .nav-container {
-  height: 100%;
+  margin-top: -2%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
