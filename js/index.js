@@ -101,3 +101,70 @@ line2.addEventListener("mouseenter", () => {
 line2.addEventListener("mouseleave", () => {
     line2.style.borderBottom = "2px dashed #C0C0C0"
 })
+
+//event 7
+document.querySelectorAll("h2").forEach(el => {
+    el.addEventListener("click", function() {
+      el.style.color= "#17A2B8";
+    })
+  })
+
+//event 8
+const footer = document.querySelector("footer")
+const body = document.querySelector("body")
+
+footer.addEventListener("mouseenter", () => {
+    footer.style.backgroundColor = "white",
+    body.style.backgroundColor = "#FFEBCD"
+})
+
+footer.addEventListener("mouseleave", () => {
+    footer.style.backgroundColor = "#FFEBCD",
+    body.style.backgroundColor = "white"
+})
+
+//event 9
+const img = document.querySelector(".content-destination img")
+
+img.addEventListener("mouseenter", () => {
+  img.style.transform = "scale(1.2)";
+  img.style.transition = "transform 0.3s"
+})
+img.addEventListener("mouseleave", () => {
+  img.style.transform = "scale(1)"
+})
+
+//event 10
+document.querySelectorAll(".btn").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+  el.style.transform = "scale(1.2)";
+  el.style.transition = "transform 0.3s"
+})
+})
+document.querySelectorAll(".btn").forEach(el => {
+    el.addEventListener("mouseleave", () => {
+  el.style.transform = "scale(1)"
+})
+})
+
+//nested events
+const adventure = document.querySelector(".inverse-content");
+
+adventure.addEventListener('click', () => {
+  adventure.style.backgroundColor= "#17A2B8";
+})
+
+const adventureImg = document.querySelector('.inverse-content p');
+
+adventureImg.addEventListener('click', (event) => {
+  adventureImg.style.backgroundColor="#FFEBCD";
+  console.log(event)
+  event.stopPropagation();
+})
+
+//stop nav
+const stopLink = document.querySelector(".nav-link");
+
+stopLink.addEventListener("click", (event) => {
+  event.preventDefault();
+})
