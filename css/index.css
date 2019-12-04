@@ -180,9 +180,11 @@ img {
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  z-index: 100;
 }
 .main-navigation .nav-container {
-  height: 100%;
+  margin-top: -2%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
